@@ -2171,6 +2171,11 @@ body {
 .vision-item:nth-of-type(2n +1) {
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 991px) {
+  .vision-item:nth-of-type(2n +1) {
+    flex-direction: column;
+  }
+}
 
 .vision-img-cont {
   padding: 13px 16px 17px 19px;
@@ -2704,4 +2709,5 @@ body {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  background-color: #FFFEFA;
 }/*# sourceMappingURL=main.css.map */

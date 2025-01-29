@@ -174,6 +174,9 @@
   }
   .vision-item:nth-of-type(2n +1) {
     flex-direction: row-reverse;
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 
   .vision-img-cont {
