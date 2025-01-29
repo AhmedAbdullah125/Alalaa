@@ -2,9 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'; // Importing React to use JSX syntax and create components.
-import { motion } from 'framer-motion';
 import logo from '../../../src/assets/images/home/logo.png'
-import SaudiTech from '../../../public/SaudiTech.png'
 import Loading from '@/app/loading';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';

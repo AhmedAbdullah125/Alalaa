@@ -5,9 +5,12 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import Loading from '@/app/loading';
-
+import img1 from '/public/Frame1.svg'
+import img2 from '/public/Frame2.svg'
+import img3 from '/public/Vector3.svg'
+import img4 from '/public/Vector4.svg'
 export default function About() {
-    
+    let imgs = [img1, img2, img3, img4]
     const [loading, setLoading] = useState(true); // State for loading indicator
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
@@ -54,7 +57,8 @@ export default function About() {
                                 className="option" key={index}
                             >
                                 <div className="img-cont">
-                                    <Image src={item.image} width={200} height={200} alt="Mazar"></Image>
+                                    {/* <Image src={item.image} width={200} height={200} alt="Mazar"></Image> */}
+                                    <Image src={imgs[index]} width={200} height={200} alt="Mazar"></Image>
                                 </div>
                                 <div className="text">
                                     <h2>{item.title}</h2>

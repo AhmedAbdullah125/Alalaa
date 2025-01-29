@@ -9,6 +9,9 @@ import NumberTicker from '../ui/number-ticker';
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import BlurFade from '../ui/blur-fade';
+import img1 from '/public/alalaa.jpg'
+import img2 from '/public/alalaa2.jpg'
+import img3 from '/public/alalaa3.jpg'
 
 
 export default function SingleService() {
@@ -40,6 +43,7 @@ export default function SingleService() {
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });
+    let imgs = [img1, img2, img3,img1, img2, img3,img1, img2, img3,img1, img2, img3,img1, img2, img3,img1, img2, img3]
     return (
         <div className="SingleService" >
             {
@@ -62,18 +66,30 @@ export default function SingleService() {
                                 </div>
                             </div>
                             <div className="img-cont">
-                                <Image src={data?.cover} alt="Mazar" width={200} height={200} />
+                                {/* <Image src={data?.cover} alt="Mazar" width={200} height={200} /> */}
+                                <Image src={img2} alt="Mazar" width={200} height={200} />
                             </div>
                         </div>
                         <div className="gallery">
                             <h3>معرض الصور</h3>
                             <div className="columns-2 gap-4 sm:columns-5">
-                                {
+                                {/* {
                                     data.images.map((img, idx) =>
                                         <BlurFade key={img.id} delay={0.25 + idx * 0.05} inView>
                                             <a href={img.image} data-fancybox="gallery">
                                                 <figure>
                                                     <Image src={img.image} alt="Mazar" width={200} height={200} className="mb-4 size-full rounded-lg object-contain" />
+                                                </figure>
+                                            </a>
+                                        </BlurFade>
+                                    )
+                                } */}
+                                {
+                                    imgs.map((img, idx) =>
+                                        <BlurFade key={img.id} delay={0.25 + idx * 0.05} inView>
+                                            <a href={img.src} data-fancybox="gallery">
+                                                <figure>
+                                                    <Image src={img} alt="Mazar" width={200} height={200} className="mb-4 size-full rounded-lg object-contain" />
                                                 </figure>
                                             </a>
                                         </BlurFade>

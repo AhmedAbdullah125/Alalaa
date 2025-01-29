@@ -1,12 +1,11 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import Loading from '@/app/loading';
 import { motion } from 'framer-motion';
-
+import img from '/public/alalaa.jpg'
 
 
 export default function Who() {
@@ -34,7 +33,6 @@ export default function Who() {
                 setLoading(false)
             });
     }, []);  // Run this effect whenever the `language` changes
-    console.log(data);
 
     return (
         <>
@@ -68,7 +66,7 @@ export default function Who() {
                                     className="r-side">
                                     <div className="img-cont">
                                         <div className="overlay"></div>
-                                        <Image src={data.image} width={500} height={500} alt="Mazar" className="img-hero" />
+                                        <Image src={data.image=="https://alaa.irfaad.com/storage/data/2/nYhTSgVlDyFzLAIviRczhqeXX3B0DJDC87bOmYVJ.png" ? img : data?.image} width={500} height={500} alt="Mazar" className="img-hero" />
                                         {/* <Image src={data?.who_we_are.image} width={500} height={500} alt="Mazar" className="img-hero" /> */}
                                     </div>
                                 </motion.div>

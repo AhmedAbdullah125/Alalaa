@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 import bg from '/public/alalaa.jpg'
 import Loading from '@/app/loading';
 import { motion } from 'framer-motion'; // Importing the motion component from Framer Motion for animations
-
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
-
+import mess1 from '/public/mess1.jpg'
+import mess2 from '/public/7b466c61dc6afa662fbdeedbfd7ec13c.jpg'
 export default function Book() {
 
     const [loading, setLoading] = useState(true); // State for loading indicator
@@ -59,7 +59,7 @@ export default function Book() {
                                 <div className="vision-img-cont">
                                     <div className="vision-img">
                                         <figure>
-                                            <Image src={data.our_vision.image} width={200} height={200} alt="vision" />
+                                            <Image src={data.our_vision.image=="https://alaa.irfaad.com/storage/data/4/dYa8Qx1LlE4VhiujopxHKthGYu12bzmnBHiRKENj.png"||null?mess1:data.our_vision.image} width={200} height={200} alt="vision" />
                                         </figure>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ export default function Book() {
                                 <div className="vision-img-cont">
                                     <div className="vision-img">
                                         <figure>
-                                            <Image src={data.our_message.image} width={200} height={200} alt="vision" />
+                                            <Image src={data.our_message.image=="https://alaa.irfaad.com/storage/data/3/cXx6yleXKvNuUNnMYUyhvxpRhaEK0Igv49fUhFD4.png"||null?mess2:data.our_message.image} width={200} height={200} alt="vision" />
                                         </figure>
                                     </div>
                                 </div>

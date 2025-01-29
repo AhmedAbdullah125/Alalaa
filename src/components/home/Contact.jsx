@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react';
-import bg from '/public/bg.webp';
 import MazarInfo from '../../components/book/MazarInfo';
 import FormPage from '../../components/book/FormPage';
 export default function Contact() {

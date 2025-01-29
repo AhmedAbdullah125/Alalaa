@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from 'next/link';
+import img from '/public/alalaa.jpg'
 export default function About() {
     const [loading, setLoading] = useState(true); // State for loading indicator
     const [data, setData] = useState(null);
@@ -42,6 +43,7 @@ export default function About() {
                         loading ? <Loading /> :
                             <Swiper
                                 slidesPerView={3.1}
+                                spaceBetween={24}
                                 autoplay={false}
                                 dir={'rtl'}
                                 loop={true}
@@ -81,7 +83,10 @@ export default function About() {
                                             viewport={{ once: true }}
                                             className="option" key={index}
                                         >
-                                            <div className="img-cont"> <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> </div>
+                                            <div className="img-cont">
+                                                {/* <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> */}
+                                                <Image src={img} width={200} height={200} alt="Mazar"></Image>
+                                            </div>
                                             <div className="text">
                                                 <h2>{item.title}</h2>
                                                 <p>{item.description}</p>

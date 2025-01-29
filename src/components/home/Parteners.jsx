@@ -6,6 +6,8 @@ import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
 import Loading from '@/app/loading';
 
+
+
 export default function Parteners() {
     const [loading, setLoading] = useState(true); // State for loading indicator
     const [data, setData] = useState(null);
@@ -34,21 +36,7 @@ export default function Parteners() {
     return (
         <div className="parteners" >
             <div className="container  m-auto" >
-                {/* <div className="parts-cont">
-                    <h3>انضم لشركاء النجاح</h3>
-                    <div className="partss">
-                        <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg border ">
-                            <Marquee pauseOnHover className="[--duration:20s]">
-                                {parts.map((review, index) => (
-                                    <ReviewCard key={index} {...review} />
-                                ))}
-                            </Marquee>
-
-
-                        </div>
-                    </div>
-
-                </div> */}
+                
                 <div className="nums">
                     <h3> ارقام عملائنا </h3>
                     {
