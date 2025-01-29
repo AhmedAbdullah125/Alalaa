@@ -4,12 +4,23 @@ import Image from 'next/image'
 
 export default function Loading() {
     return (
-        // <div className='loading-page'>
-        //     <Image src={footerimg} alt='logo' className='loading-logo' />
-        // </div>
-        <div id="page">
-            <div id="container m-auto">
-               <Image src={footerimg} alt='logo' className='loading-logo  ' />
+        <div className="fire-cont">
+            <div className="fire">
+                <div className="fire-left">
+                    <div className="main-fire"></div>
+                    <div className="particle-fire"></div>
+                </div>
+                <div className="fire-center">
+                    <div className="main-fire"></div>
+                    <div className="particle-fire"></div>
+                </div>
+                <div className="fire-right">
+                    <div className="main-fire"></div>
+                    <div className="particle-fire"></div>
+                </div>
+                <div className="fire-bottom">
+                    <div className="main-fire"></div>
+                </div>
             </div>
         </div>
     )
