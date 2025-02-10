@@ -2710,4 +2710,135 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #FFFEFA;
+}
+
+.rawas-page {
+  padding: 56px 0;
+  background-color: var(--white-color);
+}
+@media screen and (max-width: 767px) {
+  .rawas-page {
+    padding: 20px 0;
+  }
+}
+.rawas-page .rawas-cont {
+  background-color: #203F39;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  padding: 40px;
+}
+@media screen and (max-width: 767px) {
+  .rawas-page .rawas-cont {
+    border-radius: 20px;
+    padding: 20px 20px 70px 20px;
+  }
+}
+.rawas-page .rawas-cont .swiper-slide {
+  height: auto;
+}
+.rawas-page .rawas-cont .main-side {
+  width: 100%;
+  max-width: 670px;
+}
+@media screen and (max-width: 767px) {
+  .rawas-page .rawas-cont .main-side {
+    max-width: 100%;
+  }
+}
+.rawas-page .rawas-cont .main-side h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--white-color);
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 767px) {
+  .rawas-page .rawas-cont .main-side h3 {
+    font-size: 24px;
+  }
+}
+.rawas-page .rawas-cont .main-side h4 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--white-color);
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .rawas-page .rawas-cont .main-side h4 {
+    font-size: 16px;
+  }
+}
+.rawas-page .rawas-cont .main-side .rawas-options {
+  display: flex;
+  padding: 33px 16px;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #36524D;
+  border-radius: 10px;
+  height: 100%;
+}
+.rawas-page .rawas-cont .main-side .rawas-options:hover {
+  background-color: var(--main-hover);
+}
+.rawas-page .rawas-cont .main-side .rawas-options h4 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.rawas-page .rawas-cont .main-side .rawas-options h2 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--main-color);
+}
+.rawas-page .rawas-cont .main-side .rawas-options h2 span {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--main-color);
+}
+.rawas-page .rawas-cont .main-side .rawas-options p {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--white-color);
+}
+.rawas-page .rawas-cont .main-side a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 11px;
+  background-color: var(--main-color);
+  color: #203F39;
+  height: 48px;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.rawas-page .rawas-cont .main-side a:hover {
+  background-color: var(--main-hover);
+}
+.rawas-page .rawas-cont .main-side a span {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #203F39;
+}
+.rawas-page .rawas-cont .main-side a i {
+  color: #203F39;
+  font-size: 16px;
+}
+.rawas-page .rawas-cont .logo-rawas {
+  position: absolute;
+  bottom: 0;
+  inset-inline-end: 0;
+  z-index: 100;
+}
+.rawas-page .rawas-cont .logo-rawas:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .rawas-page .rawas-cont .logo-rawas {
+    opacity: 0.5;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -7,6 +7,7 @@ import Who from '../components/home/Who';
 import Vision from '../components/home/Vision';
 import Services from '../components/home/Services';
 import Contact from '../components/home/Contact';
+import Rawas from '../components/home/Rawas';
 export default function Home() {
   
   return (
@@ -17,10 +18,8 @@ export default function Home() {
       <Parteners/>
       <About/>
       <Services/>
+      <Rawas />
       <Contact />
-      {/* <Brief/> */}
-      {/* <Discount/> */}
-      {/* <News/> */}
     </main>
   );
 }
