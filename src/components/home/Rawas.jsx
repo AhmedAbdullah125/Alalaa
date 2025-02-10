@@ -13,7 +13,16 @@ import Image from 'next/image';
 export default function Rawas() {
 
     return (
-        <div className='rawas-page' id='contact'>
+        <motion.div
+            initial={{ y: 100, opacity: 0, scale: 0.5 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{
+                type: 'spring',
+                bounce: 0.5,
+                duration: .5,
+            }}
+            viewport={{ once: true }}
+            className='rawas-page' id='contact'>
             <div className="container m-auto">
                 <div className="rawas-cont">
                     <div className="main-side">
@@ -113,6 +122,6 @@ export default function Rawas() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
