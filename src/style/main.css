@@ -2392,18 +2392,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
 }
 .services-conr .option .img-cont {
   width: 100%;
   aspect-ratio: 328/297;
   border-radius: 5px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .services-conr .option .img-cont img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.services-conr .option .text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .services-conr .option .text h2 {
   font-size: 24px;
@@ -2418,6 +2425,7 @@ body {
   color: #333;
   margin-bottom: 24px;
   text-align: start;
+  height: 100%;
 }
 .services-conr .option .text a {
   font-size: 16px;
@@ -2734,9 +2742,6 @@ body {
     padding: 20px 20px 70px 20px;
   }
 }
-.rawas-page .rawas-cont .swiper-slide {
-  height: auto;
-}
 .rawas-page .rawas-cont .main-side {
   width: 100%;
   max-width: 670px;
@@ -2841,4 +2846,8 @@ body {
   .rawas-page .rawas-cont .logo-rawas {
     opacity: 0.5;
   }
+}
+
+.swiper-slide {
+  height: auto !important;
 }/*# sourceMappingURL=main.css.map */

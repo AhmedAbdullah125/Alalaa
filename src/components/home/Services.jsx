@@ -70,7 +70,7 @@ export default function About() {
                                     }
                                 }}
                             >
-                                {data.map((item, index) =>
+                                {/* {data.map((item, index) =>
                                     <SwiperSlide key={index}>
                                         <motion.div
                                             initial={{ y: 100, opacity: 0, }}
@@ -84,7 +84,6 @@ export default function About() {
                                             className="option" key={index}
                                         >
                                             <div className="img-cont">
-                                                {/* <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> */}
                                                 <Image src={img} width={200} height={200} alt="Mazar"></Image>
                                             </div>
                                             <div className="text">
@@ -94,7 +93,94 @@ export default function About() {
                                             </div>
                                         </motion.div>
                                     </SwiperSlide>
-                                )}
+                                )} */}
+                                <SwiperSlide>
+                                    <motion.div
+                                        initial={{ y: 100, opacity: 0, }}
+                                        whileInView={{ y: 0, opacity: 1, }}
+                                        transition={{
+                                            type: 'spring',
+                                            bounce: 0.5,
+                                            duration: .5,
+                                        }}
+                                        viewport={{ once: true }}
+                                        className="option"
+                                    >
+                                        <div className="img-cont">
+                                            {/* <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> */}
+                                            <Image src={img} width={200} height={200} alt="Mazar"></Image>
+                                        </div>
+                                        <div className="text">
+                                            <h2>النقل البري</h2>
+                                            <p>تستخدم شركة الآلاء أسطولاً حديثاً ومجهزاً بأنظمة متقدمة لضمان سلامة شحنات الوقود ودقتها.
+
+                                                إدارة وتشغيل محطات الوقود:
+
+                                                إنشاء محطات حديثة تخدم جميع احتياجات العملاء على أعلى المعايير.
+
+                                                إدارة تشغيل المحطات بما يضمن الكفاءة والجودة العالية.
+
+                                                توفير خدمات نقل الوقود. </p>
+                                            <Link href={`/`} className="btn"><span>اعرف اكتر </span> <i className="fa-solid fa-chevron-left"></i></Link>
+                                        </div>
+                                    </motion.div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <motion.div
+                                        initial={{ y: 100, opacity: 0, }}
+                                        whileInView={{ y: 0, opacity: 1, }}
+                                        transition={{
+                                            type: 'spring',
+                                            bounce: 0.5,
+                                            duration: .5,
+                                        }}
+                                        viewport={{ once: true }}
+                                        className="option"
+                                    >
+                                        <div className="img-cont">
+                                            {/* <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> */}
+                                            <Image src={img} width={200} height={200} alt="Mazar"></Image>
+                                        </div>
+                                        <div className="text">
+                                            <h2>المقاولات العامة </h2>
+                                            <p>تنفيذ مشاريع إنشاء وترميم المباني والبنية التحتية.
+
+                                                تقديم حلول متكاملة تشمل الأعمال الكهربائية والميكانيكية.
+
+                                                تنفيذ مشاريع الطرق والإنارة بما يتماشى مع أعلى المعايير.
+
+                                                متخصصون في إنشاء محطات الوقود. </p>
+                                            <Link href={`/`} className="btn"><span>اعرف اكتر </span> <i className="fa-solid fa-chevron-left"></i></Link>
+                                        </div>
+                                    </motion.div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <motion.div
+                                        initial={{ y: 100, opacity: 0, }}
+                                        whileInView={{ y: 0, opacity: 1, }}
+                                        transition={{
+                                            type: 'spring',
+                                            bounce: 0.5,
+                                            duration: .5,
+                                        }}
+                                        viewport={{ once: true }}
+                                        className="option"
+                                    >
+                                        <div className="img-cont">
+                                            {/* <Image src={item.cover} width={200} height={200} alt="Mazar"></Image> */}
+                                            <Image src={img} width={200} height={200} alt="Mazar"></Image>
+                                        </div>
+                                        <div className="text">
+                                            <h2>السلامة</h2>
+                                            <p>تركيب وصيانة أنظمة الإطفاء والإنذار المتطورة.
+
+                                                تقديم عقود صيانة شاملة وخدمات إصدار تراخيص الدفاع المدني.
+
+                                                توفير حلول مبتكرة تلبي احتياجات السلامة المتنوعة. </p>
+                                            <Link href={`/`} className="btn"><span>اعرف اكتر </span> <i className="fa-solid fa-chevron-left"></i></Link>
+                                        </div>
+                                    </motion.div>
+                                </SwiperSlide>
                             </Swiper>
                     }
                 </div>

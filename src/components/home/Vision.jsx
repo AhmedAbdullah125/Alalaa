@@ -54,7 +54,8 @@ export default function Book() {
                                 }} className="vision-item">
                                 <div className="vision-content">
                                     <h3>{data?.our_vision.title}</h3>
-                                    <p> {data?.our_vision.description} </p>
+                                    {/* <p> {data?.our_vision.description} </p> */}
+                                    <p>أن نصبح الشريك المفضل في مجالات النقل، المقاولات، وخدمات الأمن والسلامة، من خلال تقديم حلول مبتكرة ومستدامة تعزز تجربة عملائنا وترفع معايير الجودة. </p>
                                 </div>
                                 <div className="vision-img-cont">
                                     <div className="vision-img">
@@ -75,7 +76,8 @@ export default function Book() {
                                 }} className="vision-item">
                                 <div className="vision-content">
                                     <h3>{data?.our_message.title}</h3>
-                                    <p> {data?.our_message.description} </p>
+                                    {/* <p> {data?.our_message.description} </p> */}
+                                    <p>نلتزم بالتميز في تقديم خدماتنا المتنوعة، بالاعتماد على فريق عمل محترف وتقنيات متقدمة، مما يساهم في بناء مستقبل أكثر أماناً واستدامة. </p>
                                 </div>
                                 <div className="vision-img-cont">
                                     <div className="vision-img">
