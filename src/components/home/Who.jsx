@@ -10,73 +10,45 @@ import img from '/public/alalaa.jpg'
 
 export default function Who() {
 
-    const [loading, setLoading] = useState(true); // State for loading indicator
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-        setLoading(true);
-        const headers = {
-            lang: 'ar', // Change language dynamically based on state
-        };
-        // Fetch data from the API with Axios
-        axios.get(`${API_BASE_URL}/about`
-            , {
-                headers: headers,
-            }).then(response => {
-                setData(response.data.data);  // Set the response data to state
-                setLoading(false);  // Set loading to false
 
-            })
-            .catch(error => {
-                setError(error);  // Handle any errors
-                console.error('Error fetching data:', error);
-                setLoading(false)
-            });
-    }, []);  // Run this effect whenever the `language` changes
 
     return (
-        <>
-            {
-                loading ? <Loading /> :
-                    <section className={` hero-main why`} id='about'>
-                        <div className="container m-auto">
-                            <div className="hero-about" >
-                                <motion.div
-                                    initial={{ opacity: 0, x: -200 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{
-                                        type: 'spring',
-                                        bounce: 0.2,
-                                        duration: .5,
-                                    }}
-                                    viewport={{ once: true }}
-                                    className="l-side">
-                                    {/* <h3 className='sec-title'>{data?.title}</h3>
-                                    <p className='who-p'>  {data?.description}  </p> */}
-                                    <h3 className='sec-title'>شركة الآلاء الوطنية التجارية: نحو مستقبلٍ مزدهر </h3>
-                                    <p className='who-p'>تأسست شركة الآلاء الوطنية التجارية في عام 1998م كمؤسسة فردية وتحولت لشركة ذات مسؤولية محدودة في عام 2016م، وتطورت منذ ذلك الحين لتصبح إحدى الشركات الرائدة في المملكة العربية السعودية، حيث تقدم خدمات متكاملة في مجالات النقل البري، إدارة وتشغيل محطات الوقود، المقاولات العامة، الأمن، والسلامة. تعمل الشركة وفق أعلى معايير الجودة والابتكار لتحقيق رؤيتها المتمثلة في دعم تطلعات عملائها والمساهمة في تحقيق أهداف رؤية المملكة 2030. </p>
-                                
-                                </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, x: 200 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{
-                                        type: 'spring',
-                                        bounce: 0.2,
-                                        duration: .5,
-                                    }}
-                                    viewport={{ once: true }}
-                                    className="r-side">
-                                    <div className="img-cont">
-                                        <div className="overlay"></div>
-                                        <Image src={data.image=="https://alaa.irfaad.com/storage/data/2/nYhTSgVlDyFzLAIviRczhqeXX3B0DJDC87bOmYVJ.png" ? img : data?.image} width={500} height={500} alt="Mazar" className="img-hero" />
-                                        {/* <Image src={data?.who_we_are.image} width={500} height={500} alt="Mazar" className="img-hero" /> */}
-                                    </div>
-                                </motion.div>
-                            </div>
+
+        <section className={` hero-main why`} id='about'>
+            <div className="container m-auto">
+                <div className="hero-about" >
+                    <motion.div
+                        initial={{ opacity: 0, x: -200 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                            type: 'spring',
+                            bounce: 0.2,
+                            duration: .5,
+                        }}
+                        viewport={{ once: true }}
+                        className="l-side">
+                       
+                        <h3 className='sec-title'>شركة الآلاء الوطنية التجارية: نحو مستقبلٍ مزدهر </h3>
+                        <p className='who-p'>تأسست شركة الآلاء الوطنية التجارية في عام 1998م كمؤسسة فردية وتحولت لشركة ذات مسؤولية محدودة في عام 2016م، وتطورت منذ ذلك الحين لتصبح إحدى الشركات الرائدة في المملكة العربية السعودية، حيث تقدم خدمات متكاملة في مجالات النقل البري، إدارة وتشغيل محطات الوقود، المقاولات العامة، الأمن، والسلامة. تعمل الشركة وفق أعلى معايير الجودة والابتكار لتحقيق رؤيتها المتمثلة في دعم تطلعات عملائها والمساهمة في تحقيق أهداف رؤية المملكة 2030. </p>
+
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 200 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                            type: 'spring',
+                            bounce: 0.2,
+                            duration: .5,
+                        }}
+                        viewport={{ once: true }}
+                        className="r-side">
+                        <div className="img-cont">
+                            <div className="overlay"></div>
+                            <Image src={img} width={500} height={500} alt="Mazar" className="img-hero" />
                         </div>
-                    </section >
-            }
-        </>
+                    </motion.div>
+                </div>
+            </div>
+        </section >
     );
 }

@@ -6,8 +6,34 @@
     position: relative;
     overflow: hidden;
     height: calc(100vh - 90px);
+    position: relative;
+
+    .mute-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 20;
+        color: $white;
+
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     .overlay {
+        position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         background: rgb(0, 0, 0);
@@ -178,11 +204,13 @@
         overflow: visible;
     }
 }
-*{
-transition: all .3s ease;
-//smooth scroll
-scroll-behavior: smooth;
+
+* {
+    transition: all .3s ease;
+    //smooth scroll
+    scroll-behavior: smooth;
 }
+
 .sec-title {
     font-size: 32px;
     color: $sec;
@@ -206,7 +234,8 @@ scroll-behavior: smooth;
         flex-direction: column-reverse;
         gap: 35px;
     }
-    .sec-title{
+
+    .sec-title {
         color: $white;
     }
 
@@ -297,14 +326,16 @@ scroll-behavior: smooth;
             position: relative;
             overflow: hidden;
             border-radius: 30px;
-            .overlay{
+
+            .overlay {
                 position: absolute;
                 top: 0;
                 right: 0;
                 width: 100%;
                 height: 100%;
                 background: rgba(0, 0, 0, 0.2);
-                &:hover{
+
+                &:hover {
                     background-color: transparent;
                 }
             }
@@ -371,6 +402,7 @@ scroll-behavior: smooth;
         transform: rotate(14deg) translate(12px, -68px)
     }
 }
+
 @keyframes dotted2ltr {
     from {
         transform: rotate(22deg) translate(0px, 0px)
@@ -380,6 +412,7 @@ scroll-behavior: smooth;
         transform: rotate(22deg) translate(0px, 130px)
     }
 }
+
 @keyframes dotted2rtl {
     from {
         transform: rotate(22deg) translate(0px, 0px)
