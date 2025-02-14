@@ -636,6 +636,11 @@ header .side-menu-active {
   font-weight: 700;
   margin-bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .hero .overlay .heading h1 {
+    font-size: 20px;
+  }
+}
 .hero .overlay .heading p {
   margin-bottom: 8px;
   font-size: 16px;
@@ -712,12 +717,6 @@ header .side-menu-active {
 @media (max-width: 676px) {
   .hero .overlay {
     padding: 40px 0 0 0;
-  }
-  .hero .overlay .heading h1 {
-    font-size: 36px;
-  }
-  .hero .overlay .heading p {
-    font-size: 24px;
   }
   .hero .overlay .heading .links {
     width: 95%;
