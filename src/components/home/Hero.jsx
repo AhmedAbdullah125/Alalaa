@@ -35,68 +35,60 @@ export default function Hero() {
 
     }, []);  // Run this effect whenever the `language` changes
     return (
-        <>
-            {
-                loading ?
-                    <Loading />
-                    :
-                    <div className="hero" style={{ backgroundImage: `url(${bg.src})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                        <div className="overlay">
-                            <div className="heading">
-                                {
-                                    loading ? <Loading /> :
-                                        <Swiper
-                                            slidesPerView={3.1}
-                                            spaceBetween={24}
-                                            autoplay={false}
-                                            dir={'rtl'}
-                                            loop={true}
-                                            modules={[Autoplay, Navigation, Pagination]}
-                                            breakpoints={{
-                                                1400: {
-                                                    slidesPerView: 1,
-                                                },
-                                                1100: {
-                                                    slidesPerView: 1,
-                                                },
-                                                767: {
-                                                    slidesPerView: 5,
-                                                },
-                                                640: {
-                                                    slidesPerView: 1,
-                                                    autoplay: false,
-                                                    spaceBetween: 16
-                                                },
-                                                100: {
-                                                    slidesPerView: 1,
-                                                    autoplay: false,
-                                                    spaceBetween: 16
-                                                }
-                                            }}
-                                        >
-                                            {data.map((item, index) =>
-                                                <SwiperSlide key={index}>
-                                                    <h1>طور أعمالك مع حلولنا المتكاملة في النقل والمقاولات والسلامة.</h1>
-                                                    <p>رواد في تقديم حلول متكاملة للنقل البري، إدارة وتشغيل محطات الوقود، المقاولات، الأمن والسلامة. نعمل بمعايير الجودة والابتكار لدعم تطلعات عملائنا وتحقيق رؤية المملكة 2030</p>
-                                                    <div className="links">
-                                                        <Link href="/#services" className='sec-link' >تعرف علي خدماتنا </Link>
-                                                    </div>
-                                                </SwiperSlide>
-                                            )}
-                                            <SwiperSlide>
-                                                <h1>طور أعمالك مع حلولنا المتكاملة في النقل والمقاولات والسلامة.</h1>
-                                                <p>رواد في تقديم حلول متكاملة للنقل البري، إدارة وتشغيل محطات الوقود، المقاولات، الأمن والسلامة. نعمل بمعايير الجودة والابتكار لدعم تطلعات عملائنا وتحقيق رؤية المملكة 2030</p>
-                                                <div className="links">
-                                                    <Link href="/#services" className='sec-link' >تعرف علي خدماتنا </Link>
-                                                </div>
-                                            </SwiperSlide>
-                                        </Swiper>
-                                }
 
-                            </div>
-                        </div>
-                    </div>
+
+        <div>
+            {
+                loading ? <Loading /> :
+                    <Swiper
+                        slidesPerView={3.1}
+                        spaceBetween={24}
+                        autoplay={false}
+                        dir={'rtl'}
+                        loop={true}
+                        modules={[Autoplay, Navigation, Pagination]}
+                        breakpoints={{
+                            1400: {
+                                slidesPerView: 1,
+                            },
+                            1100: {
+                                slidesPerView: 1,
+                            },
+                            767: {
+                                slidesPerView: 5,
+                            },
+                            640: {
+                                slidesPerView: 1,
+                                autoplay: false,
+                                spaceBetween: 16
+                            },
+                            100: {
+                                slidesPerView: 1,
+                                autoplay: false,
+                                spaceBetween: 16
+                            }
+                        }}
+                    >
+                        {data.map((item, index) =>
+                            <SwiperSlide key={index}>
+                                <div className="hero" style={{ backgroundImage: `url(${item.image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                                    <div className="overlay">
+                                        <div className="heading">
+                                            <h1>{item.title}</h1>
+                                            <p>{item.description}</p>
+                                            <div className="links">
+                                                <Link href="/#services" className='sec-link' >تعرف علي خدماتنا </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
             }
-        </>
-    )
+
+        </div>
+
+
+    );
 }
