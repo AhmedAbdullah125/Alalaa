@@ -21,12 +21,14 @@ export default function About() {
         const headers = {
             lang: 'ar', // Change language dynamically based on state
         };
+        // Fetch data from the API with Axios
         axios.get(`${API_BASE_URL}/services`
             , {
                 headers: headers,
             }).then(response => {
                 setData(response.data.data);  // Set the response data to state
                 setLoading(false);  // Set loading to false
+
             })
             .catch(error => {
                 setError(error);  // Handle any errors
@@ -34,6 +36,8 @@ export default function About() {
                 setLoading(false)
             });
     }, []);  // Run this effect whenever the `language` changes
+    console.log(data);
+
     return (
         <div className="about" >
             <div className="container m-auto" id='services'>
@@ -69,6 +73,8 @@ export default function About() {
                                         spaceBetween: 16
                                     }
                                 }}
+                                viewport={{ once: true }}
+                                className="option"
                             >
                                 {data.map((item, index) =>
                                     <SwiperSlide key={index}>

@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import axios from 'axios';
-import { API_BASE_URL } from '@/lib/apiConfig';
 import Loading from '@/app/loading';
 import img1 from '/public/Frame1.svg'
 import img2 from '/public/Frame2.svg'
