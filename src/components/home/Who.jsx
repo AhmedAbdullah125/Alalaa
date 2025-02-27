@@ -51,11 +51,8 @@ export default function Who() {
                                     }}
                                     viewport={{ once: true }}
                                     className="l-side">
-                                    {/* <h3 className='sec-title'>{data?.title}</h3>
-                                    <p className='who-p'>  {data?.description}  </p> */}
-                                    <h3 className='sec-title'>شركة الآلاء الوطنية التجارية: نحو مستقبلٍ مزدهر </h3>
-                                    <p className='who-p'>تأسست شركة الآلاء الوطنية التجارية في عام 1998م كمؤسسة فردية وتحولت لشركة ذات مسؤولية محدودة في عام 2016م، وتطورت منذ ذلك الحين لتصبح إحدى الشركات الرائدة في المملكة العربية السعودية، حيث تقدم خدمات متكاملة في مجالات النقل البري، إدارة وتشغيل محطات الوقود، المقاولات العامة، الأمن، والسلامة. تعمل الشركة وفق أعلى معايير الجودة والابتكار لتحقيق رؤيتها المتمثلة في دعم تطلعات عملائها والمساهمة في تحقيق أهداف رؤية المملكة 2030. </p>
-                                
+                                    <h3 className='sec-title'>{data?.title}</h3>
+                                    <p className='who-p'>  {data?.description}  </p>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, x: 200 }}

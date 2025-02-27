@@ -84,7 +84,7 @@ body {
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--main-color) #fff;
-  scroll-behavior: unset !important;
+  scroll-behavior: smooth !important;
 }
 
 /*style scroll bar*/

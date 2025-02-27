@@ -9,8 +9,6 @@ import { API_BASE_URL } from "@/lib/apiConfig";
 import axios from "axios";
 import Loading from '@/app/loading';
 export default function Header() {
-  const router = useRouter()
-  let [lang, setLang] = useState('en');
   function handleClose() {
     document.querySelector('html').style.overflowY = 'unset';
     document.querySelector('.side-menu').classList.toggle('side-menu-active')

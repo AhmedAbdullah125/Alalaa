@@ -36,10 +36,10 @@ export default function Parteners() {
     return (
         <div className="parteners" >
             <div className="container  m-auto" >
-
+                
                 <div className="nums">
                     <h3> ارقام عملائنا </h3>
-                    {/* {
+                    {
                         loading ? <Loading /> :
                             <div className="numbers-cont">
                                 {
@@ -64,113 +64,7 @@ export default function Parteners() {
                                     )
                                 }
                             </div>
-                    } */}
-                    <div className="numbers-cont">
-
-                        <motion.div
-                            initial={{ y: 100, opacity: 0, }}
-                            whileInView={{ y: 0, opacity: 1, }}
-                            transition={{
-                                type: 'spring',
-                                bounce: 0.5,
-                                duration: .5,
-                            }}
-                            viewport={{ once: true }
-                            }
-                            className="number" >
-                            <h2>النقل البري</h2>
-                            <div className="needed">
-                                <NumberTicker value={160} /> +
-                            </div>
-                            <p>نقل أكثر من <NumberTicker value={160} /> مليون لتر وقود سنوياً باستخدام أسطول حديث ومجهز بأحدث التقنيات.
-
-                                تقديم خدمات النقل لأكثر من <NumberTicker value={85} /> محطة وقود. </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 100, opacity: 0, }}
-                            whileInView={{ y: 0, opacity: 1, }}
-                            transition={{
-                                type: 'spring',
-                                bounce: 0.5,
-                                duration: .5,
-                            }}
-                            viewport={{ once: true }
-                            }
-                            className="number" >
-                            <h2>إدارة وتشغيل محطات الوقود</h2>
-                            <div className="needed">
-                                <NumberTicker value={5000} /> +
-                            </div>
-                            <p>إنشاء وتشغيل أكثر من <NumberTicker value={34} /> محطة وقود في المنطقة الجنوبية.
-
-                                تقديم خدمات لأكثر من <NumberTicker value={5000} /> عميل يومياً عبر شبكة محطات متطورة.</p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 100, opacity: 0, }}
-                            whileInView={{ y: 0, opacity: 1, }}
-                            transition={{
-                                type: 'spring',
-                                bounce: 0.5,
-                                duration: .5,
-                            }}
-                            viewport={{ once: true }
-                            }
-                            className="number" >
-                            <h2>المقاولات العامة:</h2>
-                            <div className="needed">
-                                <NumberTicker value={340} /> +
-                            </div>
-                            <p>
-                                تنفيذ أكثر من <NumberTicker value={340} /> مشروع بناء وإنشاء منذ تأسيس الشركة.
-
-                                توظيف فريق عمل يضم أكثر من <NumberTicker value={85} /> من المهندسين والفنيين والعمالة ذوي الخبرة العالية.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 100, opacity: 0, }}
-                            whileInView={{ y: 0, opacity: 1, }}
-                            transition={{
-                                type: 'spring',
-                                bounce: 0.5,
-                                duration: .5,
-                            }}
-                            viewport={{ once: true }
-                            }
-                            className="number" >
-                            <h2>السلامة</h2>
-                            <div className="needed">
-                                <NumberTicker value={265} /> +
-                            </div>
-                            <p>
-                                توريد وتركيب أكثر من  <NumberTicker value={265} /> نظام إطفاء وإنذار عبر مختلف القطاعات.
-
-                                إصدار أكثر من  <NumberTicker value={760} /> شهادة اعتماد من الدفاع المدني.
-
-                                توفير خدمات صيانة لأكثر من  <NumberTicker value={94} /> منشأة سنوياً.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 100, opacity: 0, }}
-                            whileInView={{ y: 0, opacity: 1, }}
-                            transition={{
-                                type: 'spring',
-                                bounce: 0.5,
-                                duration: .5,
-                            }}
-                            viewport={{ once: true }
-                            }
-                            className="number" >
-                            <h2>الأمن</h2>
-                            <div className="needed">
-                                <NumberTicker value={4500} /> +
-                            </div>
-                            <p>تركيب أكثر من <NumberTicker value={4500} /> كاميرا مراقبة في المنشآت السكنية والتجارية والحكومية.
-
-                                تصميم وتنفيذ أكثر من <NumberTicker value={495} /> نظام أمني متكامل يشمل أجهزة الإنذار من السرقة وكاميرات المراقبة والبوابات الأمنية.
-
-                                خدمة أكثر من <NumberTicker value={65} /> منشأة سنوياً بتقديم حلول أمنية شاملة </p>
-                        </motion.div>
-                    </div>
+                    }
                 </div>
 
             </div>

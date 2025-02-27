@@ -73,7 +73,7 @@ export default function SingleService() {
                         <div className="gallery">
                             <h3>معرض الصور</h3>
                             <div className="columns-2 gap-4 sm:columns-5">
-                                {/* {
+                                {
                                     data.images.map((img, idx) =>
                                         <BlurFade key={img.id} delay={0.25 + idx * 0.05} inView>
                                             <a href={img.image} data-fancybox="gallery">
@@ -83,8 +83,8 @@ export default function SingleService() {
                                             </a>
                                         </BlurFade>
                                     )
-                                } */}
-                                {
+                                }
+                                {/* {
                                     imgs.map((img, idx) =>
                                         <BlurFade key={img.id} delay={0.25 + idx * 0.05} inView>
                                             <a href={img.src} data-fancybox="gallery">
@@ -94,7 +94,7 @@ export default function SingleService() {
                                             </a>
                                         </BlurFade>
                                     )
-                                }
+                                } */}
                             </div>
                         </div>
                     </div>
