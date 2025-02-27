@@ -55,7 +55,7 @@ export default function Hero() {
                                 slidesPerView: 1,
                             },
                             767: {
-                                slidesPerView: 5,
+                                slidesPerView: 1,
                             },
                             640: {
                                 slidesPerView: 1,
