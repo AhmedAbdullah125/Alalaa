@@ -7,6 +7,8 @@ import img1 from '/public/Frame1.svg'
 import img2 from '/public/Frame2.svg'
 import img3 from '/public/Vector3.svg'
 import img4 from '/public/Vector4.svg'
+import axios from 'axios';
+import { API_BASE_URL } from '@/lib/apiConfig';
 export default function About() {
     let imgs = [img1, img2, img3, img4]
     const [loading, setLoading] = useState(true); // State for loading indicator
