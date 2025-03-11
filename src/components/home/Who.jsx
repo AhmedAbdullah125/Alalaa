@@ -33,7 +33,6 @@ export default function Who() {
                 setLoading(false)
             });
     }, []);  // Run this effect whenever the `language` changes
-    console.log(data);
 
     return (
         <>
@@ -54,6 +53,8 @@ export default function Who() {
                                     className="l-side">
                                     <h3 className='sec-title'>{data?.title}</h3>
                                     <p className='who-p'>  {data?.description}  </p>
+                                    {/* تحميل الملف التعريفي */}
+                                    <a href={data?.file} className='btn' target="_blank" rel="noopener noreferrer">تحميل الملف التعريفي</a>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, x: 200 }}
@@ -67,8 +68,7 @@ export default function Who() {
                                     className="r-side">
                                     <div className="img-cont">
                                         <div className="overlay"></div>
-                                        <Image src={data.image == "https://alaa.irfaad.com/storage/data/2/nYhTSgVlDyFzLAIviRczhqeXX3B0DJDC87bOmYVJ.png" ? img : data?.image} width={500} height={500} alt="Mazar" className="img-hero" />
-                                        {/* <Image src={data?.who_we_are.image} width={500} height={500} alt="Mazar" className="img-hero" /> */}
+                                        <Image src={data?.image} width={500} height={500} alt="Mazar" className="img-hero" />
                                     </div>
                                 </motion.div>
 

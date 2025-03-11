@@ -32,14 +32,14 @@ export default function Parteners() {
                 setLoading(false)
             });
     }, []);  // Run this effect whenever the `language` changes
-    console.log(data);
    
     return (
         <div className="parteners" >
             <div className="container  m-auto" >
                 
                 <div className="nums">
-                    <h3> ارقام عملائنا </h3>
+                    <h3> أرقامنا .. </h3>
+                    <h4>منذ تأسيسنا ونحن نصنع الفرق... إليك أرقام الآلاء التي تتحدث عن نفسها!</h4>
                     {
                         loading ? <Loading /> :
                             <div className="numbers-cont">
@@ -58,7 +58,8 @@ export default function Parteners() {
                                             className="number" key={index}>
                                             <h2>{item.title}</h2>
                                             <div className="needed">
-                                                <NumberTicker value={item.counter} /> +
+                                                {/* <NumberTicker value={item.counter} /> + */}
+                                                <NumberTicker value={Number(item.counter)>1000000?Number(item.counter)/1000000: Number(item.counter)} /> {Number(item.counter)>1000000? 'مليون': ''} +
                                             </div>
                                             <p>{item.description}</p>
                                         </motion.div>

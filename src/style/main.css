@@ -614,10 +614,18 @@ header .side-menu-active {
   height: 100%;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(234, 150, 35, 0.4) 100%);
+}
+.hero .overlay .swiper {
+  width: 100%;
+  height: 100%;
+}
+.hero .overlay .swiper-slide {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .hero .overlay .heading {
   width: 100%;
@@ -811,9 +819,32 @@ header .side-menu-active {
   font-size: 16px;
   font-weight: 600;
   text-align: justify;
+  margin-bottom: 32px;
 }
 @media screen and (max-width: 767px) {
   .hero-about .l-side p {
+    font-size: 14px;
+  }
+}
+.hero-about .l-side a {
+  height: 48px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 0 24px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-wrap: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .hero-about .l-side a {
     font-size: 14px;
   }
 }
@@ -831,7 +862,6 @@ header .side-menu-active {
 .hero-about .l-side .who-p {
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 0px;
   line-height: 28px;
   color: #F7F7F7;
 }
@@ -1080,8 +1110,25 @@ header .side-menu-active {
   font-size: 32px;
   font-weight: 700;
   color: #333333;
+  margin-bottom: 12px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .about h2 {
+    font-size: 24px;
+  }
+}
+.about h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
   margin-bottom: 24px;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .about h3 {
+    font-size: 20px;
+  }
 }
 .about p {
   font-size: 24px;
@@ -1224,6 +1271,12 @@ header .side-menu-active {
 .parteners .nums h3 {
   font-size: 32px;
   font-weight: 700;
+  color: #21201F;
+  margin-bottom: 12px;
+}
+.parteners .nums h4 {
+  font-size: 16px;
+  font-weight: 600;
   color: #21201F;
   margin-bottom: 32px;
 }
@@ -2443,7 +2496,7 @@ body {
   text-align: start;
 }
 .services-conr .option .text p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: #333;
   margin-bottom: 24px;
@@ -2486,6 +2539,7 @@ body {
 @media only screen and (max-width: 767px) {
   .SingleService .single-details .text {
     width: 100%;
+    order: 2;
   }
 }
 .SingleService .single-details .text h2 {
@@ -2504,6 +2558,11 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+@media screen and (max-width: 767px) {
+  .SingleService .single-details .text .counters {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .SingleService .single-details .text .counters .counter {
   padding: 32px 8px;
@@ -2548,6 +2607,7 @@ body {
 @media only screen and (max-width: 767px) {
   .SingleService .single-details .img-cont {
     width: 100%;
+    order: 1;
   }
 }
 .SingleService .gallery h3 {
